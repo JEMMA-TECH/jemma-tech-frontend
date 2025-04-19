@@ -274,7 +274,7 @@
           </Button>
 
           {#if step < steps.length}
-            <Button on:click={nextStep} class="bg-[#001f3f] hover:bg-[#001737] text-white">
+            <Button on:click={nextStep} class="bg-[#032f3c] hover:bg-[#001737] text-white">
               Continue
             </Button>
           {:else}

@@ -68,13 +68,13 @@
   <div class="min-h-screen flex flex-col md:flex-row bg-gray-50">
     <!-- Mobile Topbar -->
     <div class="md:hidden flex items-center justify-between bg-[#001f3f] text-white px-4 py-3">
-      <span class="font-bold text-lg">LaundryPro</span>
+      <span class="font-bold text-lg">Jemma</span>
       <button on:click={toggleMobileNav}><Menu class="w-6 h-6" /></button>
     </div>
   
     <!-- Sidebar -->
     <aside class={`sidebar md:relative md:translate-x-0 w-64 bg-[#001f3f] text-white flex flex-col ${mobileNavOpen ? 'open' : ''}`}>
-      <div class="p-6 text-xl font-bold tracking-wide">🧺 LaundryPro</div>
+      <div class="p-6 text-xl font-bold tracking-wide">Jemma</div>
       <nav class="flex-1 px-4 space-y-1 text-sm">
         <a class="block rounded px-3 py-2 hover:bg-[#003366]" href="/dashboard">Dashboard</a>
         <a class="block rounded px-3 py-2 hover:bg-[#003366]" href="/orders">Orders</a>
