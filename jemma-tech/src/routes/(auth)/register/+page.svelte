@@ -225,24 +225,38 @@
           {/if}
 
           {#if step === 3}
-            <div class="space-y-4">
-              <div class="grid grid-cols-2 gap-4">
-                <div>
-                  <h4 class="font-medium text-[#001f3f] mb-2">Company Details</h4>
-                  <div class="space-y-2 text-sm">
-                    <p><span class="text-gray-500">Name:</span> {formData.name}</p>
-                    <p><span class="text-gray-500">Email:</span> {formData.company_email}</p>
-                    <p><span class="text-gray-500">Phone:</span> {formData.phone || "Not provided"}</p>
-                    <p><span class="text-gray-500">Address:</span> {formData.address || "Not provided"}</p>
-                  </div>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-medium text-[#001f3f] mb-2 flex items-center justify-between">
+                  Company Details
+                  <button 
+                    class="text-sm text-[#001f3f] hover:underline" 
+                    on:click={() => step = 1}
+                  >
+                    Edit
+                  </button>
+                </h4>
+                <div class="space-y-2 text-sm">
+                  <p><span class="text-gray-500">Name:</span> {formData.name}</p>
+                  <p><span class="text-gray-500">Email:</span> {formData.company_email}</p>
+                  <p><span class="text-gray-500">Phone:</span> {formData.phone || "Not provided"}</p>
+                  <p><span class="text-gray-500">Address:</span> {formData.address || "Not provided"}</p>
                 </div>
-                <div>
-                  <h4 class="font-medium text-[#001f3f] mb-2">User Details</h4>
-                  <div class="space-y-2 text-sm">
-                    <p><span class="text-gray-500">Name:</span> {formData.first_name} {formData.last_name}</p>
-                    <p><span class="text-gray-500">Email:</span> {formData.email}</p>
-                    <p><span class="text-gray-500">Phone:</span> {formData.contact || "Not provided"}</p>
-                  </div>
+              </div>
+              <div>
+                <h4 class="font-medium text-[#001f3f] mb-2 flex items-center justify-between">
+                  User Details
+                  <button 
+                    class="text-sm text-[#001f3f] hover:underline" 
+                    on:click={() => step = 2}
+                  >
+                    Edit
+                  </button>
+                </h4>
+                <div class="space-y-2 text-sm">
+                  <p><span class="text-gray-500">Name:</span> {formData.first_name} {formData.last_name}</p>
+                  <p><span class="text-gray-500">Email:</span> {formData.email}</p>
+                  <p><span class="text-gray-500">Phone:</span> {formData.contact || "Not provided"}</p>
                 </div>
               </div>
             </div>
