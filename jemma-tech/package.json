@@ -16,6 +16,7 @@
 		"test": "npm run test:e2e"
 	},
 	"devDependencies": {
+		"@lucide/svelte": "^0.501.0",
 		"@playwright/test": "^1.49.1",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.16.0",
