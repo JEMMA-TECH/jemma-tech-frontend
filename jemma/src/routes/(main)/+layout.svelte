@@ -1,8 +1,11 @@
 <script>
+    const {children} = $props()
     import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper } from 'flowbite-svelte';
     import { ChartPieSolid, GridSolid, MailBoxSolid, UserSolid, ArrowRightToBracketOutline, BookSolid, DollarOutline, UserSettingsSolid, HomeOutline, ChartMixedDollarSolid } from 'flowbite-svelte-icons';
   </script>
-  
+<div class="flex">
+      
+    
 <Sidebar class="h-screen w-80 bg-white dark:bg-gray-800 shadow-md">
     <SidebarWrapper class="flex flex-col h-full">
       <SidebarGroup>
@@ -65,3 +68,5 @@
       </SidebarGroup>
     </SidebarWrapper>
   </Sidebar>
+  {@render children()}
+</div>
