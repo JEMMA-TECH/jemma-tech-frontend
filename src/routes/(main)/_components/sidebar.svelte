@@ -42,7 +42,7 @@
 					<Droplet class="h-5 w-5 text-white" />
 				</div>
 				<div>
-					<h2 class="text-lg font-semibold text-gray-900 dark:text-white">LaundryPro</h2>
+					<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Jemma</h2>
 				</div>
 			</div>
 		</div>

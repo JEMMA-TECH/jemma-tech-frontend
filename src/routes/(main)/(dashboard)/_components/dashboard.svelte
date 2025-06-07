@@ -214,7 +214,7 @@
 								Customer Overview
 							</Heading>
 							<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-								Manage customers on LaundryPRO
+								Manage customers on Jemma
 							</p>
 						</div>
 						<Button color="primary" size="sm" class="flex items-center gap-2">
