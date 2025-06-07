@@ -20,6 +20,44 @@
 		{ id: 'ORD005', customer: 'David Brown', status: 'Completed', items: 11, due: '2025-06-07' }
 	];
 
+	const customers = [
+		{
+			id: 'CUST001',
+			name: 'John Doe',
+			email: 'john.doe@example.com',
+			totalOrders: 12,
+			lastOrder: '2025-06-05'
+		},
+		{
+			id: 'CUST002',
+			name: 'Jane Smith',
+			email: 'jane.smith@example.com',
+			totalOrders: 8,
+			lastOrder: '2025-06-03'
+		},
+		{
+			id: 'CUST003',
+			name: 'Alex Johnson',
+			email: 'alex.johnson@example.com',
+			totalOrders: 15,
+			lastOrder: '2025-06-01'
+		},
+		{
+			id: 'CUST004',
+			name: 'Emily Brown',
+			email: 'emily.brown@example.com',
+			totalOrders: 5,
+			lastOrder: '2025-05-28'
+		},
+		{
+			id: 'CUST005',
+			name: 'Michael Lee',
+			email: 'michael.lee@example.com',
+			totalOrders: 20,
+			lastOrder: '2025-06-06'
+		}
+	];
+
 	function toggleSidebar() {
 		sidebarOpen = !sidebarOpen;
 	}
@@ -74,7 +112,7 @@
 		</div>
 
 		<!-- Recent Orders - Full Width -->
-		<div class="grid grid-cols-3">
+		<div class="grid grid-cols-3 gap-8">
 			<div
 				class="col-span-3 w-full rounded-xl border border-gray-200 bg-white shadow-none dark:border-gray-700 dark:bg-gray-800"
 			>
@@ -162,6 +200,99 @@
 					<!-- Empty state or load more -->
 					<div class="mt-6 text-center">
 						<Button color="light" size="sm">View All Orders</Button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="col-span-3 w-full rounded-xl border border-gray-200 bg-white shadow-none dark:border-gray-700 dark:bg-gray-800"
+			>
+				<div class="p-6">
+					<div class="mb-6 flex items-center justify-between">
+						<div>
+							<Heading tag="h2" class="text-lg font-semibold text-gray-900 dark:text-white">
+								Customer Overview
+							</Heading>
+							<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+								Manage customers on LaundryPRO
+							</p>
+						</div>
+						<Button color="primary" size="sm" class="flex items-center gap-2">
+							<PlusCircle class="h-4 w-4" />
+							Add Customer
+						</Button>
+					</div>
+
+					<div class="w-full overflow-x-auto">
+						<table class="w-full min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+							<thead class="bg-gray-50 dark:bg-gray-700">
+								<tr>
+									<th
+										class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
+									>
+										Customer ID
+									</th>
+									<th
+										class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
+									>
+										Name
+									</th>
+									<th
+										class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
+									>
+										Email
+									</th>
+									<th
+										class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
+									>
+										Total Orders
+									</th>
+									<th
+										class="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-500 uppercase dark:text-gray-400"
+									>
+										Last Order
+									</th>
+								</tr>
+							</thead>
+							<tbody
+								class="w-full divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800"
+							>
+								{#each customers as customer}
+									<tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+										<td
+											class="px-6 py-4 text-sm font-medium whitespace-nowrap text-gray-900 dark:text-white"
+										>
+											{customer.id}
+										</td>
+										<td
+											class="px-6 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400"
+										>
+											{customer.name}
+										</td>
+										<td
+											class="px-6 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400"
+										>
+											{customer.email}
+										</td>
+										<td
+											class="px-6 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400"
+										>
+											{customer.totalOrders}
+										</td>
+										<td
+											class="px-6 py-4 text-sm whitespace-nowrap text-gray-500 dark:text-gray-400"
+										>
+											{customer.lastOrder}
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Empty state or load more -->
+					<div class="mt-6 text-center">
+						<Button color="light" size="sm">View All Customers</Button>
 					</div>
 				</div>
 			</div>

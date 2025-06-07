@@ -69,7 +69,7 @@
                             placeholder="Enter your email"
                             bind:value={email}
                             required
-                            class="border-gray-200 pl-10 transition-all duration-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 dark:border-gray-600"
+                            class="border-gray-200 pl-10 transition-all duration-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500 dark:border-gray-600"
                             disabled={isLoading}
                         />
                     </div>
@@ -80,7 +80,7 @@
 
                 <Button
                     type="submit"
-                    class="w-full transform bg-gradient-to-r from-teal-600 to-cyan-600 py-3 font-semibold transition-all duration-200 hover:scale-[1.02] hover:from-teal-700 hover:to-cyan-700 focus:ring-4 focus:ring-teal-200 active:scale-[0.98] dark:focus:ring-teal-800"
+                    class="w-full"
                     disabled={isLoading || !email}
                 >
                     {#if isLoading}
@@ -94,7 +94,7 @@
                 <div class="text-center">
                     <a
                         href="/login"
-                        class="text-sm font-medium text-teal-600 transition-colors hover:text-teal-500 dark:text-teal-400 dark:hover:text-teal-300"
+                        class="text-sm font-medium text-primary-600 transition-colors hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300"
                     >
                         Back to login
                     </a>

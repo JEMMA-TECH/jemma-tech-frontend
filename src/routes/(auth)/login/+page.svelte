@@ -43,7 +43,7 @@
 	<Card class="bg-white/80 shadow-none dark:bg-gray-800/80">
 		<div class="p-6">
 			<div class="mb-4 text-center">
-				<h2 class="font-semibold text-xl">Welcome to JemmaTech</h2>
+				<h2 class="text-xl font-semibold">Welcome to JemmaTech</h2>
 				<p class="text-sm text-neutral-500">Sign in to your account</p>
 			</div>
 
@@ -75,7 +75,7 @@
 							placeholder="Enter your email"
 							bind:value={email}
 							required
-							class="border-gray-200 pl-10 transition-all duration-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 dark:border-gray-600"
+							class="focus:border-primary-500 focus:ring-primary-500 border-gray-200 pl-10 transition-all duration-200 focus:ring-2 dark:border-gray-600"
 							disabled={isLoading}
 						/>
 					</div>
@@ -100,7 +100,7 @@
 							placeholder="Enter your password"
 							bind:value={password}
 							required
-							class="border-gray-200 pr-10 pl-10 transition-all duration-200 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 dark:border-gray-600"
+							class="focus:border-primary-500 focus:ring-primary-500 border-gray-200 pr-10 pl-10 transition-all duration-200 focus:ring-2 dark:border-gray-600"
 							disabled={isLoading}
 						/>
 						<button
@@ -124,40 +124,39 @@
 				<!-- Remember Me & Forgot Password -->
 				<div class="flex items-center justify-between">
 					<div class="flex items-center">
-						<Checkbox color="teal" class="text-teal-600 focus:ring-teal-500" disabled={isLoading}>
+						<Checkbox
+							color="primary"
+							class="text-primary-600 focus:ring-primary-500"
+							disabled={isLoading}
+						>
 							<span class="text-sm text-gray-600 dark:text-gray-400">Remember me</span>
 						</Checkbox>
 					</div>
 					<a
 						href="/forgot-password"
-						class="text-sm font-medium text-teal-600 transition-colors hover:text-teal-500 dark:text-teal-400 dark:hover:text-teal-300"
+						class="text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 text-sm font-medium transition-colors"
 					>
 						Forgot password?
 					</a>
 				</div>
 
 				<!-- Submit Button -->
-				<Button
-					type="submit"
-					class="w-full transform bg-gradient-to-r from-teal-600 to-cyan-600 py-3 font-semibold transition-all duration-200 hover:scale-[1.02] hover:from-teal-700 hover:to-cyan-700 focus:ring-4 focus:ring-teal-200 active:scale-[0.98] dark:focus:ring-teal-800"
-					disabled={isLoading || !email || !password}
-				>
+				<Button type="submit" disabled={isLoading || !email || !password} class="w-full">
 					{#if isLoading}
 						<Spinner class="mr-3" size="4" color="secondary" />
 						Signing in...
 					{:else}
-						Sign in to your account
+						Sign in
 					{/if}
 				</Button>
 
-				<!-- Demo Credentials -->
 				<div class="text-center">
-					<p class="mb-2 text-xs text-gray-500 dark:text-gray-400">Demo credentials:</p>
-					<p
-						class="rounded bg-gray-50 px-2 py-1 font-mono text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+					<a
+						href="/register"
+						class="text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 text-sm font-medium transition-colors"
 					>
-						demo@example.com / password
-					</p>
+						Create An Account
+					</a>
 				</div>
 			</form>
 		</div>
