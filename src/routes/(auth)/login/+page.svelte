@@ -126,7 +126,7 @@
 					<div class="flex items-center">
 						<Checkbox
 							color="primary"
-							class="text-primary-600 focus:ring-primary-500"
+							class="text-primary-500 focus:ring-primary-500"
 							disabled={isLoading}
 						>
 							<span class="text-sm text-gray-600 dark:text-gray-400">Remember me</span>
@@ -134,7 +134,7 @@
 					</div>
 					<a
 						href="/forgot-password"
-						class="text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 text-sm font-medium transition-colors"
+						class="text-primary-500 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-500 text-sm font-medium transition-colors"
 					>
 						Forgot password?
 					</a>
@@ -153,9 +153,9 @@
 				<div class="text-center">
 					<a
 						href="/register"
-						class="text-primary-600 hover:text-primary-500 dark:text-primary-400 dark:hover:text-primary-300 text-sm font-medium transition-colors"
+						class="text-primary-500 hover:text-primary-500 dark:text-primary-500 dark:hover:text-primary-500 text-sm font-medium transition-colors"
 					>
-						Create An Account
+						Don't have an account? Sign up
 					</a>
 				</div>
 			</form>

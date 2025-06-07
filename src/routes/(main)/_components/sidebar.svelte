@@ -38,7 +38,7 @@
 		<!-- Header Section -->
 		<div class="border-b border-gray-200 bg-white px-4 py-4 dark:border-gray-700 dark:bg-gray-800">
 			<div class="flex items-center space-x-3">
-				<div class="bg-primary-600 flex h-8 w-8 items-center justify-center rounded">
+				<div class="bg-primary-500 flex h-8 w-8 items-center justify-center rounded">
 					<Droplet class="h-5 w-5 text-white" />
 				</div>
 				<div>

@@ -13,7 +13,7 @@
 			<div class="flex items-center justify-between">
 				<h3 class="text-center text-2xl font-semibold text-gray-900 dark:text-white">Register</h3>
 
-				<a href="/login" class="text-primary-500">Login</a>
+				<a href="/login" class="text-primary-500">Already have an account? Login</a>
 			</div>
 			{#if step === 1}
 				<div>
@@ -29,7 +29,7 @@
 								placeholder="Your Company Name"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 					<Label class="space-y-2">
@@ -41,7 +41,7 @@
 								placeholder="company@domain.com"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 					<Label class="space-y-2">
@@ -54,7 +54,7 @@
 								placeholder="Enter your Company Address"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 					<Label class="space-y-2">
@@ -66,7 +66,7 @@
 								placeholder="Enter your Company Phone Number"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 				</div>
@@ -87,7 +87,7 @@
 									placeholder="John"
 									required
 									class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-								/>
+								/><br>
 							</div>
 						</Label>
 						<Label class="space-y-2">
@@ -99,7 +99,7 @@
 									placeholder="Doe"
 									required
 									class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-								/>
+								/><br>
 							</div>
 						</Label>
 					</div>
@@ -112,7 +112,7 @@
 								placeholder="name@domain.com"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 					<Label class="space-y-2">
@@ -124,7 +124,7 @@
 								placeholder="••••••••"
 								required
 								class="focus:ring-primary-500 focus:border-primary-500 rounded-md"
-							/>
+							/><br>
 						</div>
 					</Label>
 					<Label class="space-y-2">
@@ -159,7 +159,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 1)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -168,7 +168,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 1)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -177,7 +177,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 1)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -186,7 +186,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 1)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -195,7 +195,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 2)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -204,7 +204,7 @@
 							<button
 								type="button"
 								on:click={() => (step = 2)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 						<li>
@@ -213,32 +213,32 @@
 							<button
 								type="button"
 								on:click={() => (step = 2)}
-								class="text-primary-600 ml-2 hover:underline">Edit</button
+								class="text-primary-500 ml-2 hover:underline">Edit</button
 							>
 						</li>
 					</ul>
 				</div>
 			{/if}
 
-			<div class="mt-6 flex items-center justify-between">
+			<div class="flex items-center justify-between">
 				<Button
 					type="button"
 					disabled={step === 1}
 					onclick={() => step--}
-					class="rounded-md bg-gray-500 px-4 py-2 text-white hover:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50"
+					class="rounded-md bg-gray-500 px-16 py-3 text-white hover:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50"
 					>Back</Button
 				>
 				{#if step < 3}
 					<Button
 						type="button"
 						onclick={() => step++}
-						class="bg-primary-700 hover:bg-primary-800 rounded-md px-4 py-2 text-white">Next</Button
+						class="bg-primary-500 hover:bg-primary-500 rounded-md px-16 py-3 text-white">Next</Button
 					>
 				{/if}
 				{#if step === 3}
 					<Button
 						type="submit"
-						class="bg-primary-700 hover:bg-primary-800 rounded-md px-4 py-2 text-white"
+						class="bg-primary-500 hover:bg-primary-500 rounded-md px-16 py-3 text-white"
 						>Submit</Button
 					>
 				{/if}
