@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install:*)",
+      "Read(//c/Users/KOJOGAH/Desktop/work/Help desk project/axon-helpdesk-frontend/**)",
+      "Bash(tree:*)",
+      "Bash(mkdir:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm build:*)",
+      "Bash(node:*)",
+      "Bash(pnpm list:*)",
+      "WebFetch(domain:jemma-tech-backend-production.up.railway.app)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
