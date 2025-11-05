@@ -1,42 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import 'tailwindcss';
 
-@plugin 'flowbite/plugin';
+@custom-variant dark (&:is(.dark *));
 
-@custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-	--color-primary-50: #fff5f2;
-	--color-primary-100: #fff1ee;
-	--color-primary-200: #ffe4de;
-	--color-primary-300: #ffd5cc;
-	--color-primary-400: #ffbcad;
-	--color-primary-500: #008080;
-	--color-primary-600: #ef562f;
-	--color-primary-700: #eb4f27;
-	--color-primary-800: #cc4522;
-	--color-primary-900: #a5371b;
-
-	--color-secondary-50: #f0f9ff;
-	--color-secondary-100: #e0f2fe;
-	--color-secondary-200: #bae6fd;
-	--color-secondary-300: #7dd3fc;
-	--color-secondary-400: #38bdf8;
-	--color-secondary-500: #0ea5e9;
-	--color-secondary-600: #0284c7;
-	--color-secondary-700: #0369a1;
-	--color-secondary-800: #075985;
-	--color-secondary-900: #0c4a6e;
+:root {
+  --radius: 0.625rem;
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 166 80% 35%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 180 27% 96%;
+  --secondary-foreground: 166 80% 26%;
+  --muted: 180 20% 97%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 180 50% 95%;
+  --accent-foreground: 166 80% 26%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 180 20% 90%;
+  --input: 180 20% 90%;
+  --ring: 166 80% 35%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 166 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 166 20% 25%;
+  --sidebar-primary: 166 80% 35%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 180 50% 95%;
+  --sidebar-accent-foreground: 166 80% 26%;
+  --sidebar-border: 180 20% 88%;
+  --sidebar-ring: 166 60% 50%;
 }
 
-@source "../node_modules/flowbite-svelte/dist";
-@source "../node_modules/flowbite-svelte-icons/dist";
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 166 100% 78%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 180 10% 15%;
+  --secondary-foreground: 166 100% 78%;
+  --muted: 180 10% 15%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 180 15% 20%;
+  --accent-foreground: 166 100% 78%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 180 10% 15%;
+  --input: 180 10% 15%;
+  --ring: 166 100% 78%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+  --sidebar-background: 222.2 84% 4.9%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 166 100% 78%;
+  --sidebar-primary-foreground: 222.2 84% 4.9%;
+  --sidebar-accent: 180 15% 20%;
+  --sidebar-accent-foreground: 166 100% 78%;
+  --sidebar-border: 180 10% 15%;
+  --sidebar-ring: 166 60% 50%;
+}
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
 
 @layer base {
-	/* disable chrome cancel button */
-	input[type='search']::-webkit-search-cancel-button {
-		display: none;
-	}
-	body {
-		font-family: 'Public Sans Variable', sans-serif;
-	}
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
 }

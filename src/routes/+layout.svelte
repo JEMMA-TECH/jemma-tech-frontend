@@ -1,7 +1,14 @@
 <script lang="ts">
 	import '../app.css';
-	import '@fontsource-variable/public-sans';
+	import favicon from '$lib/assets/favicon.svg';
+	import { Toaster } from '$lib/components/ui/sonner';
+
 	let { children } = $props();
 </script>
 
-{@render children()}
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+{@render children?.()}
+<Toaster />
