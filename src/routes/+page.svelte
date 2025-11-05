@@ -6,7 +6,7 @@
 	onMount(() => {
 		const token = pref.get('@jemma/access');
 		if (token) {
-			goto('/private/dashboard');
+			goto('/dashboard');
 		} else {
 			goto('/init');
 		}

@@ -34,11 +34,15 @@ export async function login(credentials: LoginRequest): Promise<AuthResponse> {
 
 		if (response.data.IsSuccess) {
 			// Store tokens if provided
-			if (response.data.Data?.accessToken) {
-				pref.set('@jemma/access', response.data.Data.accessToken);
+			const accessToken = response.data.Data?.AccessToken;
+			const refreshToken = response.data.Data?.RefreshToken;
+
+			if (accessToken) {
+				pref.set('@jemma/access', accessToken);
 			}
-			if (response.data.Data?.refreshToken) {
-				pref.set('@jemma/refresh', response.data.Data.refreshToken);
+
+			if (refreshToken) {
+				pref.set('@jemma/refresh', refreshToken);
 			}
 		}
 

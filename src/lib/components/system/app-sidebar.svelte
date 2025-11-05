@@ -27,23 +27,23 @@
 	import { page } from '$app/stores';
 
 	const mainNavigation = [
-		{ title: 'Dashboard', url: '/private', icon: Home },
-		{ title: 'Orders', url: '/private/orders', icon: ShoppingCart },
-		{ title: 'Inventory', url: '/private/inventory', icon: Warehouse },
-		{ title: 'Customers', url: '/private/customers', icon: Users }
+		{ title: 'Dashboard', url: '/dashboard', icon: Home },
+		{ title: 'Orders', url: '/orders', icon: ShoppingCart },
+		{ title: 'Inventory', url: '/inventory', icon: Warehouse },
+		{ title: 'Customers', url: '/customers', icon: Users }
 	];
 
 	const operationsNavigation = [
-		{ title: 'Pickup & Delivery', url: '/private/pickup-delivery', icon: Truck },
-		{ title: 'Services', url: '/private/services', icon: Package },
-		{ title: 'Items', url: '/private/items', icon: Shirt },
-		{ title: 'Payments', url: '/private/payments', icon: CreditCard }
+		{ title: 'Pickup & Delivery', url: '/pickup-delivery', icon: Truck },
+		{ title: 'Services', url: '/services', icon: Package },
+		{ title: 'Items', url: '/items', icon: Shirt },
+		{ title: 'Payments', url: '/payments', icon: CreditCard }
 	];
 
 	const managementNavigation = [
-		{ title: 'Reports', url: '/private/reports', icon: BarChart3 },
-		{ title: 'Employees', url: '/private/employees', icon: UserCheck },
-		{ title: 'Settings', url: '/private/settings', icon: Settings }
+		{ title: 'Reports', url: '/reports', icon: BarChart3 },
+		{ title: 'Employees', url: '/employees', icon: UserCheck },
+		{ title: 'Settings', url: '/settings', icon: Settings }
 	];
 
 	$: currentPath = $page.url.pathname;
