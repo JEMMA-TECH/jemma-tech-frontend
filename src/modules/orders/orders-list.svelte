@@ -8,6 +8,7 @@
 	import { toast } from 'svelte-sonner';
 	import { getOrderColumns } from './order-columns';
 	import AddOrderModal from './add-order-modal.svelte';
+	import { page } from '$app/stores';
 
 	let isLoadingData = $state<boolean>(false);
 	let errorMessage = $state<string | null>(null);
@@ -41,7 +42,13 @@
 		}
 	}
 
-	onMount(fetchOrders);
+	onMount(() => {
+		fetchOrders();
+		// Check if we should auto-open the add modal
+		if ($page.url.searchParams.get('add') === 'true') {
+			isAddModalOpen = true;
+		}
+	});
 </script>
 
 <div class="min-h-auto">
