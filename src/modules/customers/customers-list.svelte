@@ -8,6 +8,7 @@
 	import { toast } from 'svelte-sonner';
 	import { getCustomerColumns } from './customer-columns';
 	import AddCustomerModal from './add-customer-modal.svelte';
+	import { page } from '$app/stores';
 
 	let isLoadingData = $state<boolean>(false);
 	let errorMessage = $state<string | null>(null);
@@ -42,7 +43,13 @@
 		}
 	}
 
-	onMount(fetchCustomers);
+	onMount(() => {
+		fetchCustomers();
+		// Check if we should auto-open the add modal
+		if ($page.url.searchParams.get('add') === 'true') {
+			isAddCustomerModalOpen = true;
+		}
+	});
 </script>
 
 <div class="min-h-auto">
